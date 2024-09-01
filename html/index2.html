@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Flexbox Container */
+        #flx {
+            display: flex;
+            justify-content: space-between; /* Distribute space between items */
+            border: 1px solid #ccc; /* Optional: Visualize the flex container */
+            padding: 10px; /* Optional: Space inside the container */
+        }
+
+        #flx > div {
+            background-color: #f0f0f0; /* Visual distinction of items */
+            border: 1px solid #ddd; /* Border around items */
+            padding: 10px; /* Space inside each item */
+            text-align: center; /* Center text inside items */
+            width: 60px; /* Fixed width for flex items */
+        }
+
+        /* Grid Container */
+        .grd {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+            gap: 10px; /* Space between grid items */
+            width: 400px; /* Adjusted width to fit items */
+            border: 1px solid #ccc; /* Optional: Visualize the grid container */
+            padding: 10px; /* Optional: Space inside the container */
+        }
+
+        .grd > div {
+            background-color: #f0f0f0; /* Visual distinction of items */
+            border: 1px solid #ddd; /* Border around items */
+            padding: 10px; /* Space inside each item */
+            text-align: center; /* Center text inside items */
+        }
+
+        /* Responsive Adjustments */
+        @media all and (min-width: 481px) and (max-width: 786px) {
+            #flx {
+                flex-direction: column; /* Stack items vertically on medium screens */
+                align-items: center; /* Center items horizontally */
+            }
+
+            .grd {
+                grid-template-columns: repeat(4, 1fr); /* Single column on medium screens */
+                width: 100%; /* Full width of container */
+            }
+        }
+        @media all and (min-width:320px) and (max-width:480px) {
+            .grd {
+                grid-template-columns: repeat(2, 1fr); /* Single column on medium screens */
+                width: 100%; /* Full width of container */
+                background-color: yellow;
+            }
+            #flx {
+                flex-direction: column-reverse; /* Stack items vertically on medium screens */
+                align-items: center; /* Center items horizontally */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Flexbox Layout -->
+    <div id="flx">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+
+    <!-- Grid Layout -->
+    <div class="grd">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+        <div>9</div>
+        <div>10</div>
+    </div>
+</body>
+</html>

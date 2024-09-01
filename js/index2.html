@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+  function printOf() {
+    var name = "ashfaque";
+    console.log(name.length);
+}
+
+// Call the function to execute it
+printOf();
+
+function sub(a, b) {
+    return a - b;
+}
+
+console.log(sub(7, 7)); // This will output 0
+
+function add(a,b){
+    return a+b
+ }
+ console.log(add(7,6))
+
+ function sumOfN(n) {
+    let sum = 0;  // Declare sum with let to avoid global scope
+    for (let i = 0; i <= n; i++) {  // Use let for loop variable
+        sum += i;  // Accumulate the sum
+    }
+
+    return sum;  // Return the result
+}
+
+console.log(sumOfN(10));  // Call the function with 10
+
+function mult(m) {
+    let sum = 0;
+    for (let i = 0; i < m; i++) { // Loop from 0 to m-1
+        sum += m * i;
+    }
+    return sum;
+}
+
+console.log(mult(5)); // Outputs: 0 + 5 + 10 + 15 + 20 = 50
+   
+var details={
+    name:"ashking",
+    age:27,
+    hobbies:["codding","music"],
+    print:function(){
+        console.log("my name is",this.name)
+        console.log("my age is",this.age)
+        console.log("my hobbies are",this.hobbies.join(" "))
+    }
+}
+details.print()
+
+var e_commerce = {
+    products: ["earphone", "headphones", "earpods"],
+    quantity: [4, 3, 2],
+    price: [700, 400, 489],
+    total: function() {
+        var sum = 0;
+        for (var i = 0; i < this.quantity.length; i++) { // Iterate over the length of quantity array
+            sum += this.quantity[i] * this.price[i]; // Calculate total value
+        }
+        return sum;
+    }
+};
+
+// Call the total method and log the result
+console.log(e_commerce.total()); // Use parentheses to call the method
+
+var products=["macbook","iphone","ipad"]
+var prices=[50000,1000000,40000]
+//convrt arry to objct
+var data=[]
+for(var i=0; i<products.length; i++){
+    var obj={}
+    obj["name"]=products[i]
+    obj["price"]=prices[i]
+    obj.name=products[i]
+    obj.price=prices[i]
+
+    data.push(obj)
+}
+console.log(data)
+
+var details={
+    data:[],
+    addStudnt:function(name,math,eng,ssc){
+        var obj={};
+        obj.name=name;
+        obj.math=math;
+        obj.eng=eng,
+        obj.ssc=ssc
+
+        this.data.push(obj)
+    }
+   
+}
+details.addStudnt("ashg",55,65,78)
+details.addStudnt("king",56,45,77)
+console.log(details.data)
+
+//array
+//let fruits = ["apple", "banana"];
+//fruits.push("orange");
+//console.log(fruits); // ["apple", "banana", "orange"]
+
+// Remove the last element ("orange")
+//fruits.pop();
+//console.log(fruits); // ["apple", "banana"]
+
+// Add a new element ("mango") to the beginning
+//fruits.unshift("mango");
+//console.log(fruits); // ["mango", "apple", "banana"]
+
+// Add another new element ("kiwi") to the beginning
+//fruits.unshift("kiwi");
+//console.log(fruits); // ["kiwi", "mango", "apple", "banana"]
+
+let fruits = ["kiwi", "mango", "apple", "banana"];
+let moreFruits = ["onion", "potato"];
+// Create a new array by concatenating fruits and moreFruits
+fruits = fruits.concat(moreFruits);
+console.log(fruits); // ["kiwi", "mango", "apple", "banana", "onion", "potato"]
+
+
+let result = fruits.slice(1, 4); // Extract elements from index 1 up to, but not including, index 2
+console.log(result); // Outputs: ["mango"]
+
+
+let mangoIndex = fruits.indexOf("mango");
+let hasCake = fruits.includes("cake");
+
+console.log(`Index of mango: ${mangoIndex}`); // Outputs: Index of mango: 1
+console.log(`Array includes cake: ${hasCake}`); // Outputs: Array includes cake: false
+console.log(fruits.join(" "))
+console.log(fruits.reverse())
+console.log(fruits.splice(1,2,"papaya","coconut"))
+console.log(fruits
+    )
+    //array sum
+function arraySum(numbers){
+    return numbers.reduce((sum,num)=>num+sum,0)
+}
+
+//arry filter
+function filterGrtThn(numbers,target){
+   return numbers.filter(num=>num>target)
+}
+
+//array avg
+function arryAvg(numbers){
+    if(numbers.length==0){
+        return 0;
+    }
+   const sum=numbers.reduce((acc,num)=>acc+num,0);
+   return sum/numbers.length
+}
+
+//array intersection
+function arrayIntersection(arr1,arr2){
+    return arr1.filter(value=>arr2.includes(value))
+}
+
+//array sorting
+function sortArrayAlphabet(strings){
+    return strings.sort();
+}
+
+
+
+
+</script>
+</html>

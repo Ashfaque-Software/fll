@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root"></div>
+    <p> Explain closures in JS with an example of statements in loop?</p>
+    <p>Explain hoisting in JS?</p>
+   <p>15. Explain the features of HTML5?</p>
+   <p> What is the purpose of using <figure> and <figcaption> elements in HTML5?</p>
+    <p> What is the purpose of z-index property in CSS?</p>
+    <p> What is the use of float property?</p>
+    <p>3. Definition List: It is a special kind of list which is used to list the or terms with their definitions. It can be defined using the <dl>, <dt> and <dd> tags. dt – definition term, dd – definition description</p>
+</body>
+<script>
+//1.declrtv vs imprtv prgrmng
+//ans.in the realm of web devlpmnt undrstnd the cncpts of dclrtv & imprtv prgrmng is crucl for desgning intrcactv & dynmc web applcns.
+    
+//2.impertv prormng:imprtv progrmng is a prgrmng paradgm tht focs on descrbng how a progrm oprts.it invls writng code tht outlns a sers of stps to achv spcfc goal.
+const element = document.createElement("p");
+      element.textContent = "Carpe Diem";
+      element.className = "quote";
+      const rootElement = document.getElementById("root");
+      rootElement.appendChild(element);
+   
+//3.declrtv:cntry to imprtv prgrmng,declrtv prgrmng emphsz wht the desrd outcm is,rathr thn how to achv it.ths prdgm abstrcts the logic of state chngs or elmnt manpltn,allwng
+ //devlprs to exprss thr intntn without detlng the cntrl flow or sts mngmnt.
+ crossorigin
+    src="https://unpkg.com/react@18/umd/react.development.js"
+  ></script>
+  <script
+    crossorigin
+    src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+  ></script>
+  <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+  <script type="text/babel">
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<p className="quote">Carpe Diem</p>);
+    
+   //4. Example of DOM Manipulation with JavaScript:
+   const element = document.createElement("p");
+      element.textContent = "Carpe Diem";
+      element.className = "quote";
+      const rootElement = document.getElementById("root");
+      rootElement.appendChild(element);
+
+      //5 React and ReactDOM Example:
+      <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script>
+      const element = React.createElement("p", {
+        className: "quote",
+        children: "Carpe Diem",
+      });
+      const reactRoot = ReactDOM.createRoot(document.getElementById("root"));
+      reactRoot.render(element);
+    </script>
+</script>
+</html>
+
+

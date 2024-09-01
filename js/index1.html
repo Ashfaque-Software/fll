@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //1.variable?
+     //ans.the variable is strg locatns with assigned names it is used to hold data which u can choose later.
+     //diff cstmr who log in to amzn,fb or flkprt shld see their name on top, not fixed name.the varble can be used to str the cstmr name. 
+     let a=5;
+     var b=9;
+     const c=11;
+
+     //2.why we use js?
+     //ans.understndng js varbl is fundamntl for writing effctv & orgnzd code. varble serve as cntnr for storing & mnpltng data allowing dvlpr to crt dynmc $ intcv applcn
+
+   //3. data type?
+   //ans.undrstnd data type is fundmntl in prgrmn as it defines the typ of data a varble can hold & the oprtn tht can be prfmd in it.
+   //java like mny prgrmn lng supports vrs data typs to reprsnt diffrnt knd of infmtn
+
+   //why is it useful?
+   //ans.data typs enble dvlprs to manuplt and procss data accrtly and effcntly.
+   //ex-real-world-in a library systm books can be ctgrzd into diff gnre similar to how data types catgrzd values.
+
+   //4.what is string?
+   //ans. strng is a sqynce of chrctr use to to reprsnt txt.
+   var name ="ashfaque"
+
+   //5.What is Number?
+   //ans.Number is a data type used to represent numerical values.
+   var age=27
+
+   //6.naming rules in variable data type?
+   //ans.name can begn wd $ & _chrctr,u shld not use js resrvd kywrd as varle name,varbl name shld not strt with numrcl(0-9),js name varlbe are case senstv,u shld nt use keywrd as vrbl name.
+
+   //7.Type of?
+   //.ans-tells abt the type of varble
+   console.log(typeof(age))
+
+   //8.Trthy & flsy valus?
+   //ans.the value tht can be assgnd to varble can be cllsfd into primtv & non-prmtv catgrz thy can also be clssfd as truthy r falsy values.
+   //there r only 6 falsy value in js 1.nan,2.undfnd,3.null,4.empty strng,0,false anything tht not falsy is trthy.
+
+   //9.condtnl statmnt?
+   //ans.cndntl statmnt are used to decd the flow of exctn based on a diffrnt cndtn.if the cndtn is true u can prfm one actn if the cndtn is false u can
+   //prfm another actn.thrgh cndtnl statmnt we can cntrl which code needs to run r which node will not run.
+   var name="ashfaque";
+   var name2="king";
+   if(name2==name){
+    console.log("name are equal")
+   }else{
+     console.log("not equal")
+   }
+
+   var total_bill=800;
+   if(total_bill==500){
+    console.log("10% discount")
+   }else if(total_bill==800){
+    console.log("20% dscnt")
+   }else{
+      console.log("not discount")
+   }
+   //10.Logical oprtr
+   //ans.a logcl oprtr are symbl r word use to connct two r more expresn.the logcl oprt are vry imprtnt in js bcz thy allw u to compre varble
+   //& do smthng basd on thr reslt.if the reslt of the cmprsn true u cn prfm block of code if false u cn prfrm anthr block of code.
+   var teamA=100;
+   var teamB=200;
+
+   if(teamA && teamB ==400){
+    console.log("not equal")
+   }else if(teamA && teamB ==300){
+    console.log("equal")
+   }else{
+     console.log("nothing")
+   }
+
+   var sub="math";
+   var passing_marks=70;
+
+   var rahul_marks=75;
+   var rahul_sub="math"
+
+   if(rahul_sub==sub && rahul_marks >= passing_marks){
+       console.log("rahul passed")
+   }else{
+    console.log("rahul failed")
+   }
+
+   var g=4;
+   var h=5;
+   var j=6;
+    if(g<h || g<j){
+      console.log("g is smaller")
+    }else if(h<j || h<g){
+      console.log("h is smaller")
+    }else{
+      console.log("j is smaller")
+    }
+
+   //11.while loop?
+  //ans.the whl loop bgns wd a cndtn & its writtn smlrly to an if sttmnt.the innr prnthsis of the condtn.as long as condtn is true it will contnue to
+  //excute the statmnt.to stop the loop cndtn must evntly bcme false.
+
+  let i=0;
+  while(i<10){
+    console.log(i)
+    i++
+  }
+
+
+  let guest = 0; // Initialize guest
+
+// First while loop
+while (guest <= 10) {
+  console.log("guest", guest);
+  if (guest == 5) {
+    break; // Exit the loop when guest equals 5
+  }
+  guest++;
+}
+
+// Second while loop
+while (guest <= 10) {
+  if (guest == 3) {
+    guest++;
+    continue; // Skip the current iteration when guest equals 3
+  }
+  console.log("guest", guest);
+  guest++;
+}
+
+  //for loop
+     for(let i=1; i<=10; i++){
+      console.log(i*2)
+     }
+
+     //single line
+     let bag=""
+     for(let i=0; i<5; i++){
+        bag=bag+i+" "
+     }
+    console.log(bag)
+
+    for(var q=1; q<=5; q=q*2){
+       bag=bag+q+" "
+    }
+    console.log(bag)
+
+  for(let i=5; i>0; i--){
+    console.log(i)
+  }
+
+  var N=5;
+  var sum=0;
+  for(let i=1; i<=N; i++){
+    sum=sum+i
+  }
+  console.log(sum)
+
+  //12.break?
+  //ans.a break statmnt in a loop is use to exit the loop prmtrly.
+  for(let guest=1; guest<=10; guest++){
+    console.log(guest,"guest got the train")
+    if(guest==3){
+      break
+    }
+   
+  }
+
+
+  //13.contnue
+  //ans.a contnu stmnt is usd to skip the currnt itrtn of the loop and prcss wd the nxt itrtn.
+  for(let guest=1; guest<=10; guest++){
+  
+    if(guest==3){
+      continue
+    }
+    console.log(guest,"guest got the train")
+  }
+  
+  //14.data types
+  //ans.primitives:string,number,boolean,undfnd,null,symbl
+  //non-prmtv:functn,objct,arry
+
+  //15.undfnd
+  //ans.undfnd in js is flsy vlys.a varble tht has been delrd but has not been assgn to a varble is set to hv an undfnd vlue.it essnly mns the vlu exst but lcks of mngngfl value
+   var x;
+   console.log(x)
+  //16.nulll
+  //ans.null reprsnt the intnll absence the objct value.it is oftn used to expltly indct tht a varbl shld hv no value or tht objct proprty has empty value.
+  var y=null
+  console.log(y)
+  //17.array?
+  //ans.an array is a contgs chnks of memry tht can str multpl vls.it allows to store & mange cllctn of data in a single varble.
+  var namesARRAy=["asd","don","ttt","ytyt","ooo"]
+  console.log(namesARRAy)
+  console.log(namesARRAy[4])
+  console.log(namesARRAy.length)
+  namesARRAy.push("ashfaque")
+  console.log(namesARRAy)
+  //upfating
+  namesARRAy[2]="thor"
+  console.log(namesARRAy)
+
+  var namesARRAy=["asd","don","ttt","ytyt","ooo"]
+  for (let i=0; i<namesARRAy.length; i++){
+    console.log(namesARRAy[i])
+  }
+  namesARRAy.pop()
+  console.log(namesARRAy)
+
+  var namesARRAy=["asd","don","ttt","ytyt","ooo"]
+  var reverse=[];
+  for(let i=namesARRAy.length-1; i>=0; i--){
+    reverse.push(namesARRAy[i])
+  }
+  console.log(reverse)
+
+  var numbers=[2,3,4,5,6,7,8,2,4,7,10]
+  var event_count=0;
+  var odd_count=0;
+  for(let i=0; i<numbers.length; i++){
+    if(numbers[i]%2==0){
+      event_count++
+    }else{
+      odd_count++
+    }
+  }
+console.log(event_count)
+console.log(odd_count)
+ 
+  //18.concatenation?
+  //ans.cnctatn is the prcss of combininig two string
+  var firstName="ashfaque";
+  var lastName="ansari";
+  var fullName=firstName+" "+ lastName;
+  console.log(fullName)
+
+  //19.immutble nture of string?
+  //ans.strng in js r immutble mns thr value cannt be chngd aftr thy crtd.any oprtn tht seems to modfy the strng actlly crtd new string.
+   var text="hello"
+   text[0]="c"
+   console.log(text)
+   //mutable oprtn
+    var message="hello";
+    message=message+",world!"
+    console.log(message)
+    var dart="hey"
+    var upparecaseword=dart.toUpperCase()
+    console.log(upparecaseword)
+    var lowerCase=dart.toLowerCase()
+    console.log(lowerCase)
+
+  //20.function?
+  //ans.functn r fundmntl concpt in progrmng tht allow devlprs to encpslt reusbl peces of code to prfrm spcfc task.thy ply a crucl role in making code more modulr readbl & mntnble.
+  //functn gv svrl bnft modlrty:code is orgnzd into mngbl chnks enhnce code rdblty & mntnce.
+  //reusblty:functn called mltplctn time.reducing code duplctn.
+  //abstrcn:dvlpr can focus on wht a functn does rathr thn implmntd promtng a highr lvl of abstrctn.
+  //scoping:functn crt thr own scope prvntng nmng cnflcts and promtng encpsltn.jst lik a recp in cookbook functn contn a set of instrtn to accmplsh
+  //a spcfc tsk each time u bak a cke u fllow the sam recpe,emphszng the rsblty aspct of functn simlrly an orgnztn diffrnt deprtmnt hndle spcfk task such as
+  //hr foe hiring finance for budgting 
+
+  function printOf(){
+    var name="ddd";
+    console.log(name, name.length)
+  }
+  printOf()
+
+  function sum1(a,b){
+      return a+b
+  }
+  console.log(sum1(5,8))
+function mult(x,y){
+  return x*y
+}
+console.log(mult(7,8))
+
+function check_Even_odd(num2) {
+    if (num2 % 2 == 0) {
+        return "even";
+    } else {
+        return "odd";
+    }
+}
+
+console.log(check_Even_odd(44));
+
+function sumOfN(n){
+  sum=0;
+  for(i=0; i<=n; i++){
+    sum=sum+i
+  }
+  console.log("sum is",sum);
+  return sum
+}
+console.log(sumOfN(5)); // Output will be "Sum is 15" and the return value will be 15
+
+
+  //21.local scope vs global scope
+  //ans.in prgrmng undrstndng varble scope is is crucial,two prmry scope exst local scope r global scope. locl varbl are cnfnd to the scop of the functn
+  //in whuch thy r defnd while globl varbl can be accsd frm anywhre.
+  //undrstnd varble scope hlps prvnt unintended side effects & prmotes modular,maintnble code.local varble encpslte data within functn reducing the rsk
+  //of unintentnl modifictn.globl varbl allow data shrng acrss functn but reqr carfl mangmnt to avoid conflcts.
+  //real-world-exmple:imgn a toolbx shrd by multple workers(functn) each wrkrs has thr own set of tools(locl scope) that thy use indpndntly.
+  //while thy can accss tools frm toolbox,modfyng thm affcts everyne,so thy prmrly use thr own tools to avoid conflicts.
+  function  isPrime(num){
+    var count=0
+    for(var i=1; i<=num; i++){
+      if(num%2==0){
+        count++
+      }
+    }
+    if(count==2){
+      return true
+    }else{
+      return false
+    }
+  }
+  var result=isPrime(5)
+  console.log(result)
+
+  
+</script>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic List Rendering</title>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://www.unpkg.com/react@18.2.0/umd/react.development.js"></script>
+  <script src="https://www.unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    // Your ItemList component code will go here
+    function Gallery({ children }) {
+  // Rest of your code..
+  return (
+    <>
+    {children}
+    </>
+  )
+}
+function Image({src}){
+    return <div>
+        <img src={src} alt="" />
+        </div>
+}
+
+
+function App(){
+    return (
+        <>
+        <Gallery>
+              <Image src="https://th.bing.com/th?id=ORMS.341036649066e3380759ce1f91088dfb&pid=Wdp&w=612&h=328&qlt=90&c=1&rs=1&dpr=1&p=0"  />
+              <Image src="https://www.bing.com/th?id=OADD2.7215759567728_11EOCB0NFK8MN7AR8M&pid=21.2&c=16&roil=0&roit=0.2519&roir=1&roib=0.7481&w=612&h=304&dynsize=1&qlt=90" />
+               </Gallery>
+        </>
+    )
+}
+const rootElement=document.getElementById("root")
+ReactDOM.createRoot(rootElement).render(<App/>)
+
+  </script>
+</body>
+</html>

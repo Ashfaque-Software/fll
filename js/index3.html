@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Nested Loops Example
+    // Nested loops are loops within loops allowing for more complex iteration over data structures.
+    // They are commonly used when working with multi-dimensional arrays or nested data structures like arrays of objects.
+    
+    var matrix = [
+        [2, 3, 4],
+        [4, 5, 6],
+        [7, 8, 9]
+    ];
+    var sum = 0;
+    for (var i = 0; i < matrix.length; i++) {
+        for (var j = 0; j < matrix[i].length; j++) {
+            sum += matrix[i][j];
+        }
+    }
+    console.log("Sum of all elements:", sum);
+
+    // Array of Products
+    var products = [
+        {name: "Product 1", price: 10},
+        {name: "Product 2", price: 20},
+        {name: "Product 3", price: 30}
+    ];
+
+    // Filtering products based on price range
+    for (var i = 0; i < products.length; i++) {
+        if (products[i].price >= 15 && products[i].price <= 25) {
+            console.log("Products whose price is between 15 and 25:", products[i].name);
+        }
+    }
+
+    // Function Statement
+    function javaScript() {
+        console.log("Welcome to function statement in JS");
+    }
+
+    // Function Expression
+    var b = function() {
+        console.log("Welcome to function expression in JS");
+    };
+
+    // Calling the functions
+    javaScript(); // Logs: "Welcome to function statement in JS"
+    b();          // Logs: "Welcome to function expression in JS"
+
+    // Function with parameters and arguments
+    function sum(a, b, c) {
+        // Parameters are a, b, and c
+    }
+    // sum(1, 2, 3); // Arguments are 1, 2, and 3 (commented out, but correct usage)
+
+    // Vaccinate function
+    var persons = ["cvb", "kil", "uuuu", "resd", "uinion"];
+    function vaccinate(person) {
+        console.log(person + " has been vaccinated");
+    }
+
+    // Calling vaccinate function for all persons using a loop
+    for (var i = 0; i < persons.length; i++) {
+        vaccinate(persons[i]);
+    }
+
+    // Using map to call the vaccinate function for all persons
+    persons.map(vaccinate); // vaccinate is used as a callback function
+
+    // Callback functions
+    function eatBreakfast(item) {
+        console.log("I will eat " + item + " as my breakfast.");
+    }
+    eatBreakfast("idli");
+
+    // Modified eatBreakfast function to include time as an argument
+    function eatBreakfast(item, time) {
+        console.log("I will eat " + item + " as my breakfast at " + time + " o'clock.");
+    }
+    eatBreakfast("idli", 9);
+
+    // Using callback functions with eatBreakfast
+    function doBrush() {
+        console.log("First brush your teeth.");
+    }
+
+  //  function eatBreakfast(item, time, doBrushCallback) {
+    //    doBrushCallback(); // Call the callback function
+      //  console.log("I will eat " + item + " as my breakfast at " + time + " o'clock.");
+    //}
+  //  eatBreakfast("idli", 9, doBrush); // Pass doBrush as a callback
+
+    // Note: Corrected the misspelling of doBrush in the final function call
+
+    //forEach
+    var sweets=["gulabjamun","rasgulla","cake","barfi","laddu"]
+    sweets.forEach((ele,index)=>{
+        console.log(ele)
+    })
+    //to pack those sweets in a box
+    var box=[]
+    sweets.forEach((elm,index)=>{
+        box.push(elm)
+    })
+    console.log(box)
+    //using map
+    var output=sweets.map(function(ele,index){
+        return ele
+    })
+    console.log(output)
+
+    //filter
+    var sweets1 = ["gulabjamun", "rasgulla", "cake", "barfi", "laddu"];
+    
+    // Filtering sweets whose names have an even number of characters
+    var output = sweets1.filter(function(elem) {
+        return elem.length % 2 === 0;
+    });
+
+    // Logging the result to the console
+    console.log(output);
+
+    //reduce
+    const array=[23,66,57,87,43]
+  const sum1 = array.reduce(function(acc,el){
+        return acc+el
+    })
+   console.log(sum1)
+
+   //sorting
+   let numbers=[4,2,8,1,3,6]
+   numbers.sort()
+   console.log(numbers)
+
+   //map
+   function doubleNumbers(arr){
+    return arr.map(num=>num*2)
+   }
+   console.log(doubleNumbers(numbers))
+
+   //reduce
+   function CalculateSum(arr) {
+        return arr.reduce((acc, curr) => acc + curr, 0);
+    }
+    console.log(CalculateSum(numbers)); 
+
+    //filter
+    function filterNum(arr){
+        return arr.filter(num=>num%2==0)
+    }
+    console.log(filterNum(numbers))
+
+    //map $ filter combination
+    const words=["apple","banana","pear","orange","grape","mango"]
+    function filterWords(arr){
+        return arr.filter(word=>word.length >=5).map(word=>word.toUpperCase())
+    }
+console.log(filterWords(words))
+
+const votes=[
+    {candidate: "A",votes:120},
+    {candidate: "B",votes:150},
+    {candidate: "C",votes:100}
+]
+function CalculateTotalVotes(arr){
+    return votes.reduce((acc,curr)=>acc+curr.votes,0)
+}
+console.log(CalculateTotalVotes(votes))
+</script>
+</html>
